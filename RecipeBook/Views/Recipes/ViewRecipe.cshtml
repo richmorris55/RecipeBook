@@ -1,0 +1,46 @@
+﻿@model Recipes
+
+<h3>@Model.Name Information</h3>
+
+<table class="table">
+    <tr>
+        <th>Recipe ID</th>
+        <th>Name</th>
+        <th>Cuisine</th>
+        <th>Description</th>
+        <th>Total Cooking Time</th>
+        <th>Servings</th>
+        <th>Ingredients With Measurements</th>
+        <th>Cooking Instructions</th>
+        <th>Notes And FAQs</th>
+        <th>Nutrition Facts</th>
+        <th>Category ID</th>
+    </tr>
+    <tr>
+        <td>@Model.RecipeID</td>
+        <td>@Model.Name</td>
+        <td>@Model.Cuisine</td>
+        <td>@Model.Description</td>
+        <td>@Model.TotalCookingTime</td>
+        <td>@Model.Servings</td>
+        <td>@Model.IngredientsWithMeasurements</td>
+        <td>@Model.CookingInstructions</td>
+        <td>@Model.NotesAndFAQs</td>
+        <td>@Model.NutritionFacts</td>
+        <td>@Model.CategoryID</td>
+    </tr>
+</table>
+
+<div style="display: block">
+    <a href="/Recipes/UpdateRecipe/@Model.RecipeID">Update this Recipe</a>
+</div>
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteRecipe", "Recipe", "Post"))
+    {
+        <input type="hidden" asp-for="RecipeID" value="@Model.RecipeID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this recipe" />
+    }
+</div>
+
