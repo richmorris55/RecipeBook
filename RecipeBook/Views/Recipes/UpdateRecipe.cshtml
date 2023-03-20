@@ -2,7 +2,7 @@
 
 <h2>Update @Model.Name</h2>
 
-@using (Html.BeginForm("UpdateRecipeToDatabase", "Recipe", "Post"))
+@using (Html.BeginForm("UpdateRecipeToDatabase", "Recipes", "Post"))
 {
     <input asp-for="RecipeID" type="hidden" value="@Model.RecipeID" />
 
