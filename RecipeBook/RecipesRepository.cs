@@ -33,7 +33,7 @@ namespace RecipeBook
 
         public void InsertRecipe(Recipes recipeToInsert)
         {
-            _conn.Execute("INSERT INTO recipes (NAME, CUISINE, DESCRIPTION, TOTALCOOKINGTIME, SERVINGS, INGREDIENTSWITHMEASUREMENTS, COOKINGINSTRUCTIONS, NOTESANDFAQS, NUTRITIONFACTS, CATEGORYID) VALUES (@name, @cuisine, @description, @totalcookingtime, @servings, @ ingredientswithmeasurements, @cookinginstructions, @notesandfaqs, @nutritionfacts, @categoryID",
+            _conn.Execute("INSERT INTO recipes (NAME, CUISINE, DESCRIPTION, TOTALCOOKINGTIME, SERVINGS, INGREDIENTSWITHMEASUREMENTS, COOKINGINSTRUCTIONS, NOTESANDFAQS, NUTRITIONFACTS, CATEGORYID) VALUES (@name, @cuisine, @description, @totalcookingtime, @servings, @ingredientswithmeasurements, @cookinginstructions, @notesandfaqs, @nutritionfacts, @categoryID);",
         
                 new { name = recipeToInsert.Name, cuisine = recipeToInsert.Cuisine, description = recipeToInsert.Description, totalcookingtime = recipeToInsert.TotalCookingTime, servings = recipeToInsert.Servings, ingredientswithmeasurements = recipeToInsert.IngredientsWithMeasurements, cookinginstructions = recipeToInsert.CookingInstructions, notesandfaqs = recipeToInsert.NotesAndFAQs, nutritionfacts = recipeToInsert.NutritionFacts, categoryID = recipeToInsert.CategoryID });
         }

@@ -15,5 +15,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Recipes\" />
+    <Folder Include="wwwroot\assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\assets\" />
   </ItemGroup>
 </Project>

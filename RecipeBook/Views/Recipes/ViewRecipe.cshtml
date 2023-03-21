@@ -37,7 +37,7 @@
 
 <div style="display: block">
 
-    @using (Html.BeginForm("DeleteRecipe", "Recipe", "Post"))
+    @using (Html.BeginForm("DeleteRecipe", "Recipes", "Post"))
     {
         <input type="hidden" asp-for="RecipeID" value="@Model.RecipeID" />
         <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this recipe" />

@@ -2,6 +2,7 @@
 
 <h2>Update @Model.Name</h2>
 
+
 @using (Html.BeginForm("UpdateRecipeToDatabase", "Recipes", "Post"))
 {
     <input asp-for="RecipeID" type="hidden" value="@Model.RecipeID" />
@@ -10,28 +11,28 @@
     <input type="text" name="Name" class="form-control" value="@Model.Name" />
 
     <label asp-for="Cuisine" class="control-label">Cuisine</label>
-    <input type="text" cuisine="Cuisine" class="form-control" value="@Model.Cuisine" />
+    <input type="text" name="Cuisine" class="form-control" value="@Model.Cuisine" />
 
     <label asp-for="Description" class="control-label">Description</label>
-    <input type="text" description="Description" class="form-control" value="@Model.Description" />
+    <input type="text" name="Description" class="form-control" value="@Model.Description" />
 
     <label asp-for="TotalCookingTime" class="control-label">TotalCookingTime</label>
-    <input type="text" totalcookingtime="Total Cooking Time" class="form-control" value="@Model.TotalCookingTime" />
+    <input type="text" name="TotalCookingTime" class="form-control" value="@Model.TotalCookingTime" />
 
     <label asp-for="Servings" class="control-label">Servings</label>
     <input type="number" step="1" name="Servings" class="form-control" value="@Model.Servings" />
 
     <label asp-for="IngredientsWithMeasurements" class=“control- label">IngredientsWithMeasurements</label>
-    <input type="text" ingredientswithmeasurements="Ingredients With Measurements" class="form-control" value="@Model.IngredientsWithMeasurements" />
+    <input type="text" name="IngredientsWithMeasurements" class="form-control" value="@Model.IngredientsWithMeasurements" />
 
     <label asp-for="CookingInstructions" class="control-label">CookingInstructions</label>
-    <input type="text" cookinginstructions="Cooking Instructions" class="form-control" value="@Model.CookingInstructions" />
+    <input type="text" name="CookingInstructions" class="form-control" value="@Model.CookingInstructions" />
 
     <label asp-for="NotesAndFAQs" class="control-label">NotesAndFAQs</label>
-    <input type="text" notesandfaqs="Notes And FAQs" class="form-control" value="@Model.NotesAndFAQs" />
+    <input type="text" name="NotesAndFAQs" class="form-control" value="@Model.NotesAndFAQs" />
 
     <label asp-for="NutritionFacts" class="control-label">NutritionFacts</label>
-    <input type="text" nutritionfacts="Nutrition Facts" class="form-control" value="@Model.NutritionFacts" />
+    <input type="text" name="NutritionFacts" class="form-control" value="@Model.NutritionFacts" />
 
     <input type="submit" value="Update Recipe" class="btn btn-primary" />
 }
