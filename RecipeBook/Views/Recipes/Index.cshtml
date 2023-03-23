@@ -6,36 +6,80 @@
     <a href="/Recipes/InsertRecipe/">Create a New Recipe</a>
 </div>
 
-<table class="table">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Cuisine</th>
-        <th>Description</th>
-        <th>Total Cooking Time</th>
-        <th>Servings</th>
-        <th>Ingredients With Measurements</th>
-        <th>Cooking Instructions</th>
-        <th>Notes And FAQs</th>
-        <th>Nutrition Facts</th>
-        <th>Category ID</th>
-    </tr>
+<table class="table border table-borderless border-warning table-warning border-2 table-striped table-hover">
+
 
     @foreach (var recipes in @Model)
     {
+            <tr>
+
+                <th colspan="2" class="text-center fw-bolder fs-3">
+
+                    @recipes.Name
+                </th>
+
+            </tr>
+
+
+            
         <tr>
+            <th>ID</th>
             <td><a href=/Recipes/ViewRecipe/@recipes.RecipeID>@recipes.RecipeID</a></td>
-            <td>@recipes.Name</td>
-            <td>@recipes.Cuisine</td>
-            <td>@recipes.Description</td>
-            <td>@recipes.TotalCookingTime</td>
-            <td>@recipes.Servings</td>
-            <td>@recipes.IngredientsWithMeasurements</td>
-            <td>@recipes.CookingInstructions</td>
-            <td>@recipes.NotesAndFAQs</td>
-            <td>@recipes.NutritionFacts</td>
-            <td>@recipes.CategoryID</td>
         </tr>
+
+       
+
+        <tr>
+            <th>Cuisine</th>
+            <td>@recipes.Cuisine</td>
+        </tr>
+
+        <tr>
+            <th>Description</th>
+            <td>@recipes.Description</td>
+        </tr>
+
+        <tr>
+            <th>Total Cooking Time</th>
+            <td>@recipes.TotalCookingTime</td>
+        </tr>
+
+        <tr>
+            <th>Servings</th>
+            <td>@recipes.Servings</td>
+        </tr>
+
+        <tr>
+            <th>Total Cooking Time</th>
+            <td>@recipes.TotalCookingTime</td>
+        </tr>
+
+        <tr>
+            <th>Ingredients With Measurements</th>
+            <td>@recipes.IngredientsWithMeasurements</td>
+        </tr>
+
+        <tr>
+            <th>Cooking Instructions</th>
+            <td>@recipes.CookingInstructions</td>
+        </tr>
+
+        <tr>
+            <th>Notes And FAQs</th>
+            <td>@recipes.NotesAndFAQs</td>
+        </tr>
+
+        <tr>
+            <th>Nutrition Facts</th>
+            <td>@recipes.NutritionFacts</td>
+        </tr>
+
+        <tr>
+            <th>Category ID</th>
+            <td>@recipes.CategoryID</td>
+
+        </tr>       
+
     }
 
 </table>
